@@ -1,0 +1,160 @@
+<!DOCTYPE html >
+<html>
+<head>
+<title>Timetable</title>
+<link rel="stylesheet" href="hobbyfav.css">
+<link rel="icon" type="image/x-icon" href="./Images/icon.jpg">
+<style>
+article {
+		font-family:sans-serif;
+		line-height:2em;
+		font-size:1.5em;
+		padding:20px;
+		border-radius:100px 10px 100px 0px;
+		background-color:#FFFF99;
+		margin:10px auto;
+		width:500px;
+		-webkit-transform:skewX(-20deg);
+}
+
+ h1 { text-align:center }
+
+.blank {
+	font-weight:900;
+}
+</style>
+</head>
+<body>
+  <!--navbar-->
+  <div class="bar" id="myNavbar">
+    <a href="./index.html" class="">HOME</a>
+    <a href="./hobbylist.html" class=""> HOBBIES</a>
+    <a href="./hobbyquiz.html" class=""> QUIZ </a>
+    <a href="./hobbyfav.html" class""> TABLE</a>
+  </div>
+
+<script type="text/javascript">
+	/*name*/
+	var userr = localStorage.getItem("in_name");
+	var userspan = document.getElementById("username");
+	userspan.innerText = userr;
+</script>
+
+<h1><u>Hi <span id="username"></span></u></h1>
+<div style="background-color:black;width:100%;height:180px;color:white;opacity:0.65;margin-bottom:30px;">
+<p style="font-size:20px;margin-left:20px;margin-top:10px;">
+<b>Having a proper Time Table is also a key to Success!</b>
+
+<br><br>
+We all have 24-hours in a day.<br><br>
+But, why does it seem that some people are able to get the most out of every minute of the day?<br><br>
+Believe it or not, they dont have the power to slow down time. They do, however, know how to properly manage their time.<br>
+</p>
+</div>
+
+    <title>Time Table</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div class="container">
+      <form >
+        <label for="work">Hobby/Work:</label>
+        <input type="text" id="work" class="form-control" name="work" value="" placeholder="What you'll do?"><br>
+        <label for="time">Time:</label>
+        <input type="time" id="time" class="form-control" name="time" value="" placeholder="eg. 8:00-9:30"> <br>
+				<option value="">Date:</option>
+				<select class="form-control" id="date" placeholder="eg. Monday">
+					<option value="Monday">Monday</option>
+					<option value="Tuesday">Tuesday</option>
+					<option value="Wednesday">Wednesday</option>
+					<option value="Thursday">Thursday</option>
+					<option value="Friday">Friday</option>
+					<option value="Saturday">Saturday</option>
+					<option value="Sunday">Sunday</option>
+				</select>
+
+
+				<button type="button" id="done" class="btn btn-primary">Add</button>
+      </form>
+<br>
+          <table class="table">
+  <thead class="thead-dark" id="mytable">
+    <tr>
+
+			<th scope="col">Hobby</th>
+      <th scope="col">Time</th>
+      <th scope="col">Date</th>
+
+    </tr>
+  </thead>
+
+</table>
+
+
+    </div>
+<br><br><br>
+      <center><button type="button" id="complete" class="btn btn-dark">Complete</button><center><br><br><br><br>
+
+
+
+    <script type="text/javascript">
+    var btn= document.getElementById("done");
+btn.addEventListener("click",AddRow);
+var row=1;
+function AddRow()
+{
+  var work=document.getElementById("work").value;
+  var time=document.getElementById("time").value;
+	var date=document.getElementById("date").value;
+
+  if(!work || !time || !date)
+  {
+    alert("Please fill all boxes!")
+    return;
+  }
+  var mytable= document.getElementById("mytable");
+  var newRow= mytable.insertRow(row);
+  var cell1= newRow.insertCell(0);
+  var cell2= newRow.insertCell(1);
+	var cell3= newRow.insertCell(2);
+
+  cell1.innerHTML = work;
+  cell2.innerHTML = time;
+	cell3.innerHTML = date;
+	if (work == "basketball" || work == "Basketball"){
+	 cell1.style.backgroundColor="#ffae1a";
+	 cell2.style.backgroundColor="#ffae1a";
+	 cell3.style.backgroundColor="#ffae1a";
+ }
+ if (work == "chess" || work=="Chess"){
+	cell1.style.backgroundColor="#808080";
+	cell2.style.backgroundColor="#808080";
+	cell3.style.backgroundColor="#808080";
+ }
+ if (work == "cooking" || work=="Cooking"){
+	cell1.style.backgroundColor="#66b366";
+	cell2.style.backgroundColor="#66b366";
+	cell3.style.backgroundColor="#66b366";
+ }
+ if (work == "painting" || work=="Painting"){
+	cell1.style.backgroundColor="#ff4d4d";
+	cell2.style.backgroundColor="#ff4d4d";
+	cell3.style.backgroundColor="#ff4d4d";
+ }
+  row++;
+  work.reset();
+}
+var complete= document.getElementById("complete");
+complete.addEventListener("click",alertt);
+function alertt()
+{
+  alert("Good! Take a ScreenShot of your Time Table and follow this. Best Of Luck.")
+}
+
+var tr = document.getElementById("table");
+var tds = tr.getElementsByTagName("td");
+
+    </script>
+
+	</body>
+</html>

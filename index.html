@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Hobbify</title>
+		<link rel="stylesheet" href="hobbify.css">
+		<link rel="icon" type="image/x-icon" href="./Images/icon.jpg">
+		<!--External social media icon styling-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body>
+<!--Navigation Bar-->
+		  <div class="bar" id="myNavbar">
+		    <a href="./index.html" class="">HOME</a>
+		    <a href="#about" class=""> ABOUT</a>
+		    <a href="./hobbylist.html" class=""> HOBBIES</a>
+		    <a href="./hobbyquiz.html" class=""> QUIZ </a>
+				<a href="./hobbyfav.html" class""> TABLE</a>
+		  </div>
+<!--Background picture1-->
+			<div class="backimg"></div>
+			<div class="backbox" id="home">
+			  <div style="white-space:nowrap;">
+			    <span class="backtext">Find <b>your</b> hobby</span>
+			  </div>
+			</div>
+<!--Buttons-->
+	<div class="button1">
+		<a href="./hobbylist.html" class="button">Hobby List</a>
+	</div>
+	<div class="button2">
+		<a href="./hobbyquiz.html" class="button">Hobby Hunt</a>
+	</div>
+<!--Body1(About Section)-->
+			<div class="body1" id="about">
+			  <h3 class="head1">WHAT WE DO</h3>
+			  <p>This website was created to help those with some free time to find their hobbies. We provide insights on all the available hobbies that is specifically suited for you.</p>
+				<p class=""><em>Click on the buttons above to start your hobby hunt or scroll down to find more about what we do.</em></p>
+			</div>
+			<div class="grid">
+<!--Grid1-->
+				<div class="grid1">
+					<div class="text1">
+          <h1>Why are Hobbies <b>important</b></h1>
+          <h5>Hobbies give you an opportunity to enhance your life. Hobbies allow you to destress yourself while remaining mentally productive. Studies have also shown that hobbies can help improve your health, lowering your blood pressure and the chances of you developing mental illnesses like depression and dementia</h5>
+				 </div>
+        </div>
+<!--Grid2-->
+				<div class="grid2">
+					<div class="text2">
+					<h1>Who can use this website</h1>
+					<h5><b>Anyone</b> can use this website. Hobbies are meant for everyone, regardless of age, amount of free time, background, condition, etc... In this website you can take a personalised quiz to find the specific hobby suited for you. Anyone and Everyone should reek the benefits of having a hobby!</h5>
+				</div>
+				</div>
+</div>
+	<!-- Slideshow container -->
+<div class="background-container">
+	<h1 class="videocaption"> Hobby Videos :D</h1>
+	<hr class="captionline">
+	<div class="slideshow-container">
+
+	  <!-- Full-width images with number and caption text -->
+	  <div class="mySlides fade">
+	    <div class="numbertext">1 / 3</div>
+			<iframe width="100%" height="480px" src="https://www.youtube.com/embed/_jXQNyqFj9I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	  </div>
+
+	  <div class="mySlides fade">
+	    <div class="numbertext">2 / 3</div>
+	    <iframe width="100%" height="480px" src="https://www.youtube.com/embed/A15FumxNg5M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	  </div>
+
+	  <div class="mySlides fade">
+	    <div class="numbertext">3 / 3</div>
+	    <iframe width="100%" height="480px" src="https://www.youtube.com/embed/aodYwALBM2E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	  </div>
+
+	  <!-- Next and previous buttons -->
+	  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+	</div>
+	<br>
+
+	<!-- The dots/circles -->
+	<div style="text-align:center">
+	  <span class="dot" onclick="currentSlide(1)"></span>
+	  <span class="dot" onclick="currentSlide(2)"></span>
+	  <span class="dot" onclick="currentSlide(3)"></span>
+	</div>
+</div>
+	<script>
+	let slideIndex = 1;
+	showSlides(slideIndex);
+
+	function plusSlides(n) {
+	  showSlides(slideIndex += n);
+	}
+
+	function currentSlide(n) {
+	  showSlides(slideIndex = n);
+	}
+
+	function showSlides(n) {
+	  let i;
+	  let slides = document.getElementsByClassName("mySlides");
+	  let dots = document.getElementsByClassName("dot");
+	  if (n > slides.length) {slideIndex = 1}
+	  if (n < 1) {slideIndex = slides.length}
+	  for (i = 0; i < slides.length; i++) {
+	    slides[i].style.display = "none";
+	  }
+	  for (i = 0; i < dots.length; i++) {
+	    dots[i].className = dots[i].className.replace(" active", "");
+	  }
+	  slides[slideIndex-1].style.display = "block";
+	  dots[slideIndex-1].className += " active";
+	}
+	</script>
+<!--Why us-->
+<div class="whyus">
+<h1 class="whytitle">What this website can do for you...</h1>
+<div class="blk1">
+<h2><b><u><a href="./hobbylist.html" class="why1-title">Find the right one for you!<a></u></b></h2>
+<p class="why1-text"> This website can help you find your perfect hobby, regardless of your age, background or amount of freetime<p>
+</div>
+
+<div class="blk2">
+		<h2><b><u><a href="./hobbyquiz.html" class="why2-title">Use our personal hobby quiz!</a></u></b></h2>
+		<p class="why2-text">This website provides you with our very own personalised quiz that can help you find the perfect hobby<p>
+</div>
+
+<div class="blk3">
+<h2><b><u><a href="./hobbyfav.html" class="why3-title">Save your progress in a table!</a></u></b></h2>
+<p class="why3-text"> Then you can place you favourite hobbies into a timetable to fit into your very own schedules :D<p>
+</div>
+</div>
+<!--customer-->
+<h1 class="customer-title"><u>Customer Review</u></h1>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front" onclick="flip">
+    </div>
+    <div class="flip-card-back">
+      <h1>Ben Dover</h1>
+      <h3 class="flip-text-back"><b>"</b>This website is super cool and super amazing. It helped find my very own hobby and I am very satisfied with its functions!<b>"</b></h3>
+    </div>
+  </div>
+</div>
+<!--Socials-->
+<div class="socialbar">
+<h1><u> Our socials! </u></h1>
+<a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+<a href="https://www.twitter.com/" class="fa fa-twitter"></a>
+<a href="https://www.reddit.com/" class="fa fa-reddit"></a>
+<a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+<a href="https://www.youtube.com/" class="fa fa-youtube"></a>
+</div>
+<!--bottom-->
+<div class="bottom" onclick='window.scrollTo({top: 0, behavior: "smooth"});'>
+
+<p class="bottomtext">↑ Back to top ↑</p>
+<div>
+	</script>
+	</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Hobby list</title>
+    <link rel="stylesheet" href="hobbifylist.css">
+  	<link rel="icon" type="image/x-icon" href="./Images/icon.jpg">
+  </head>
+  <body>
+    <!--navbar-->
+    <div class="bar" id="myNavbar">
+      <a href="./index.html" class="">HOME</a>
+      <a href="./hobbylist.html" class=""> HOBBIES</a>
+      <a href="./hobbyquiz.html" class=""> QUIZ </a>
+      <a href="./hobbyfav.html" class=""> TABLE</a>
+      <input type="text" id="myInput" onkeyup="hobbysearch()" placeholder="Search for hobbies..">
+    </div>
+    <!--filterbar-->
+    <div id="myBtnContainer">
+      <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+      <button class="btn" onclick="filterSelection('sport')"> Sports</button>
+      <button class="btn" onclick="filterSelection('brain')"> Brains</button>
+      <button class="btn" onclick="filterSelection('creative')"> Creative</button>
+      <button class="btn" onclick="filterSelection('favourite')"> Favourite</button>
+    </div>
+    <!--List-->
+    <ul style="list-style: none;" id="hobbylist">
+    <li class="filterDiv sport" id="basketball">
+      <div class="basketball">
+      <div class="basket-text">
+        <button id="favbtn0" value="basketball">Add to Favourite</button>
+        <a><h1><b><u>Basketball</u><b></h1></a>
+          <h3>Basketball is a game played between two teams of five players each on a rectangular court, usually indoors. Each team tries to score by tossing the ball through the opponent's goal, an elevated horizontal hoop and net called a basket. Basketball has a very fast and exciting pace of play. Also, each player on the court gets to play both offense and defense and the roles of each player are only loosely defined. Much of basketball easily can be practiced (like shooting or dribbling) with one person making it easy to learn. This hobby if good for those who like to be active in your free time and maintain a healthy lifestyle.</h3>
+          <h5><em>2-3hrs everyday, age: 5-50</em></h5>
+      </div>
+      <button class="accordion">Learn more</button>
+      <div class="panel">
+        <iframe width="100%" height="400px" src="https://www.youtube.com/embed/XbtmGKif7Ck" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    </li>
+  <li class="filterDiv brain" id="chess">
+  <div class="chess">
+    <div class="chess-text">
+      <button id="favbtn1" value="chess">Add to Favourite</button>
+    <a><h1><b><u>Chess</u><b></h1></a>
+      <h3>Chess is an abstract strategy board game for two players, with each piece having a different move. There are a lot of website resources like <a href="https://www.chess.com/home" style="color:white">chess.com</a> to help you improve and have a fun time learning chess.There are more possible chess games than there are observable atoms in the universe! You should pick up chess if you're looking for an mentally stimulatating hobby.</h3>
+      <h5><em>Anytime, age: Any Age</em></h5>
+     </div>
+     <button class="accordion">Learn more</button>
+     <div class="panel">
+       <iframe width="100%" height="480px" src="https://www.youtube.com/embed/OCSbzArwB10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     </div>
+     </div>
+   </li>
+   <li class="filterDiv creative" id="painting">
+  <div class="painting">
+    <div class= "paint-text">
+      <button id="favbtn2" value="painting">Add to Favourite</button>
+    <a><h1><b><u>Painting</u><b></h1></a>
+      <h3>Painting is a form of visual art. It is one of the most effective mediums of human expression, able to convey complex emotions and ideas in a few quick strokes of the brush, hence the expression "a picture is worth a thousand words". Painting has been proven to improve emotional wellbeing, problem solving skills, memory, and concentration. While not the most exciting activity out there, it offers a world of creative freedom for those willing enough to try.</h3>
+      <h5><em>3-5hrs everyday, age: 5-10</em></h5>
+    </div>
+    <button class="accordion">Learn more</button>
+    <div class="panel">
+      <iframe width="100%" height="480px" src="https://www.youtube.com/embed/jQAeOjK-XD0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </li>
+  <li class="filterDiv creative" id="cooking">
+  <div class="cooking">
+    <div class= "cook-text">
+      <button id="favbtn3" value="cooking">Add to Favourite</button>
+    <a><h1><b><u>Cooking</u><b></h1></a>
+      Learning to cook will help you understand world cultures, customs and flavors. You will also learn life skills like eating healthy, budgeting your money, and cleaning. Save some cash. Cooking is less expensive than eating at restaurants, fast food joints and school cafeterias. Cooking is a hobby for you if you're looking to impress your friends with your cooking skills. Plus, the hobby helps you become more creative and proud of your own work(food)</h3>
+      <h5><em>1-2hrs everyday, age: 17-50</em></h5>
+    </div>
+    <button class="accordion">Learn more</button>
+    <div class="panel">
+      <iframe width="100%" height="480px" src="https://www.youtube.com/embed/mhDJNfV7hjk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+</li>
+</ul>
+
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      /* Toggle between adding and removing the "active" class,
+      to highlight the button that controls the panel */
+      this.classList.toggle("active");
+
+      /* Toggle between hiding and showing the active panel */
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      }
+      else {
+        panel.style.display = "block";
+      }
+    });
+}
+  </script>
+
+
+  <script>
+  function hobbysearch() {
+    // Declare variables
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById('myInput');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("hobbylist");
+    li = ul.getElementsByTagName('li');
+
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+      a = li[i].getElementsByTagName("a")[0];
+      txtValue = a.textContent || a.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        li[i].style.display = "";
+      } else {
+        li[i].style.display = "none";
+      }
+    }
+  }
+  </script>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current control button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+<script>
+  favbtn0.addEventListener('click', function onClick() {
+    var e = document.getElementById("favbtn0"); //Get the element
+  if (document.getElementById("favbtn0").value == "basketball"){
+  favbtn0.innerHTML = "Remove from Favourite";
+  document. getElementById("basketball"). className = "filterDiv sport favourite";
+      e.setAttribute("value", "basketballr"); //Change id to div3
+}else if(document.getElementById("favbtn0").value == "basketballr"){
+  favbtn0.innerHTML = "Add to Favourite";
+  document. getElementById("basketball"). className = "filterDiv sport";
+      e.setAttribute("value", "basketball"); //Change id to div3
+}
+    filterSelection("all");
+});
+
+favbtn1.addEventListener('click', function onClick() {
+  var e = document.getElementById("favbtn1"); //Get the element
+if (document.getElementById("favbtn1").value == "chess"){
+favbtn1.innerHTML = "Remove from Favourite";
+document. getElementById("chess"). className = "filterDiv brain favourite";
+    e.setAttribute("value", "chessr"); //Change id to div3
+}else if(document.getElementById("favbtn1").value == "chessr"){
+favbtn1.innerHTML = "Add to Favourite";
+document. getElementById("chess"). className = "filterDiv brain";
+    e.setAttribute("value", "chess"); //Change id to div3
+}
+  filterSelection("all");
+});
+
+favbtn2.addEventListener('click', function onClick() {
+  var e = document.getElementById("favbtn2"); //Get the element
+if (document.getElementById("favbtn2").value == "painting"){
+favbtn2.innerHTML = "Remove from Favourite";
+document. getElementById("painting"). className = "filterDiv creative favourite";
+    e.setAttribute("value", "paintingr"); //Change id to div3
+}else if(document.getElementById("favbtn2").value == "paintingr"){
+favbtn2.innerHTML = "Add to Favourite";
+document. getElementById("painting"). className = "filterDiv creative";
+    e.setAttribute("value", "painting"); //Change id to div3
+}
+  filterSelection("all");
+});
+favbtn3.addEventListener('click', function onClick() {
+  var e = document.getElementById("favbtn3"); //Get the element
+if (document.getElementById("favbtn3").value == "cooking"){
+favbtn3.innerHTML = "Remove from Favourite";
+document. getElementById("cooking"). className = "filterDiv creative favourite";
+    e.setAttribute("value", "cookingr"); //Change id to div3
+}else if(document.getElementById("favbtn3").value == "cookingr"){
+favbtn3.innerHTML = "Add to Favourite";
+document. getElementById("cooking"). className = "filterDiv creative";
+    e.setAttribute("value", "cooking"); //Change id to div3
+}
+  filterSelection("all");
+});
+</script>
+  </body>
+</html>
